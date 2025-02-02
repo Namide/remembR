@@ -1,0 +1,45 @@
+services:
+  wordpress:
+    image: wordpress
+    container_name: remembr-php
+    ports:
+      - 8380:80
+    volumes:
+      - ../wp:/var/www/html:rw
+      - ../conf/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: Motoko
+      WORDPRESS_DB_PASSWORD: passw0rd*
+      WORDPRESS_DB_NAME: wordpress
+    user: ${USER_ID}:${GROUP_ID}
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mariadb:10.6.16
+    container_name: remembr-sql
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: Motoko
+      MYSQL_PASSWORD: passw0rd*
+      MYSQL_ROOT_PASSWORD: passw0rd*
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: remembr-phpmyadmin
+    ports:
+      - 8381:80
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: Motoko
+      PMA_PASSWORD: passw0rd*
+      UPLOAD_LIMIT: 1G
+    depends_on:
+      - mysql
+
+volumes:
+  db:
