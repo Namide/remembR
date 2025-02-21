@@ -16,6 +16,15 @@ services:
     depends_on:
       - mysql
 
+  blocks:
+    image: node:slim
+    container_name: remembr-blocks
+    volumes:
+      - ../:/usr/src/app:rw
+    working_dir: /usr/src/app/blocks
+    user: node
+    command: bash -c "npm i; npm start"
+
   mysql:
     image: mariadb:10.6.16
     container_name: remembr-sql

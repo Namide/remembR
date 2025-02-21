@@ -26,3 +26,17 @@ register_deactivation_hook( __FILE__, array( 'Remembr', 'plugin_deactivation' ) 
 require_once REMEMBR__PLUGIN_DIR . 'class.remembr.php';
 
 add_action( 'init', array( 'Remembr', 'init' ) );
+
+
+/**
+ * Registers the block using the metadata loaded from the `block.json` file.
+ * Behind the scenes, it registers also all assets so they can be enqueued
+ * through the block editor in the corresponding context.
+ *
+ * @see https://developer.wordpress.org/reference/functions/register_block_type/
+ */
+function create_blocks() {
+	register_block_type( __DIR__ . '/blocks/issue/' );
+	register_block_type( __DIR__ . '/blocks/score/' );
+}
+add_action( 'init', 'create_blocks' );
