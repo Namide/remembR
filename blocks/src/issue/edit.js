@@ -47,10 +47,10 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ content: newContent });
 	};
 
-	const setQuestion = (index, question) => {
+	const setQuestion = (question) => {
 		const list = JSON.parse(JSON.stringify(attributes.list));
 		list[index].question = question;
-		setAttributes({ list });
+		setAttributes({ question });
 	};
 
 	const setResponse = (index, response) => {
@@ -67,7 +67,7 @@ export default function Edit({ attributes, setAttributes }) {
 			response: "",
 		});
 		setAttributes({ list });
-	}
+	};
 
 	return (
 		<>
@@ -83,10 +83,9 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls> */}
 			<div {...blockProps}>
-				<ul>
-					{attributes.list.map((_, index) => (
-						<li key={index}>
-							{/* <RichText
+				{/* <strong>{__("Questions/responses list")}</strong> */}
+
+				{/* <RichText
 								tagName="div"
 								onChange={(question) =>
 									setAttributes({ list: { [index]: { question } } })
@@ -107,47 +106,61 @@ export default function Edit({ attributes, setAttributes }) {
 								className="response"
 							/> */}
 
-							<TextControl
-								onChange={(question) => setQuestion(index, question)}
-								value={attributes.list[index].question}
-								placeholder={__("Question ?")}
-							/>
-							<TextControl
-								onChange={(response) => setResponse(index, response)}
-								value={attributes.list[index].response}
-								placeholder={__("Response")}
-								onKeyUp={(event) => {
-									if (index === attributes.list.length - 1 && "Enter" === event.key) {
-										addQuestionResponse()
-									}
-								}}
-							/>
+				<div class="wp-block-remembr-issue--question">
+					❓
+					<RichText
+						tagName="div"
+						onChange={(question) => setAttributes({ question })}
+						allowedFormats={[
+							"core/bold",
+							"core/image",
+							"core/italic",
+							"core/link",
+							"core/strikethrough",
+							"core/text-color",
+						]}
+						value={attributes.question}
+						placeholder={__("Question ? ...")}
+					/>
+				</div>
 
-						</li>
-					))}
-
-					{/* <RichText
-					tagName="p"
-					onChange={onChangeContent}
-					allowedFormats={["core/bold", "core/italic"]}
-					value={attributes.content}
-					placeholder={__("Write your text...")}
-				/> */}
-				</ul>
-
-				<button onClick={addQuestionResponse}>
-					{__("Add one question")}
-				</button>
-
-				{ attributes.list.length > 1 ? (<button
-					onClick={() => {
-						const list = JSON.parse(JSON.stringify(attributes.list));
-						list.pop();
-						setAttributes({ list });
+				<div class="wp-block-remembr-issue--response">
+					{/* ▶️👉➡️ */}✔️
+					{/* <TextControl
+									onChange={(question) => setQuestion(index, question)}
+									value={attributes.list[index].question}
+									placeholder={__("Question ?")}
+								/> */}
+					<RichText
+						tagName="div"
+						onChange={(response) => setAttributes({ response })}
+						allowedFormats={[
+							"core/bold",
+							"core/image",
+							"core/italic",
+							"core/link",
+							"core/strikethrough",
+							"core/text-color",
+						]}
+						value={attributes.response}
+						placeholder={__("Response ? ...")}
+						// onKeyUp={(event) => {
+						// 	if (index === attributes.list.length - 1 && "Enter" === event.key) {
+						// 		addQuestionResponse()
+						// 	}
+						// }}
+					/>
+				</div>
+				{/* <TextControl
+					onChange={(response) => setResponse(index, response)}
+					value={attributes.list[index].response}
+					placeholder={__("Response ...")}
+					onKeyUp={(event) => {
+						if (index === attributes.list.length - 1 && "Enter" === event.key) {
+							addQuestionResponse()
+						}
 					}}
-				>
-					{__("Delete last question/response...")}
-				</button>) : <></> }
+				/> */}
 
 				{/* <p {...blockProps}>title is {attributes.title}</p> */}
 			</div>
