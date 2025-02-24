@@ -4,5 +4,5 @@
  */
 ?>
 <p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'RemembR score – hello from a dynamic block!', 'score' ); ?>
+	<?php __( 'RemembR score – hello from a dynamic block!', 'score' ); ?>
 </p>

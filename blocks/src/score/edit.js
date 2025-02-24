@@ -33,7 +33,7 @@ export default function Edit() {
 	return (
 		<div>
 			<p {...useBlockProps()}>
-				{__("RemembR score – hello from the editor!", "score")}
+				{__("RemembR score - hello from the editor!", 'remembr')}
 			</p>
 		</div>
 	);

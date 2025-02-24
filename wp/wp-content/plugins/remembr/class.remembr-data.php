@@ -91,7 +91,7 @@ class Remembr_Data {
 			qr_id bigint(20) UNSIGNED NOT NULL DEFAULT 0,
 			next_poke datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
 			current_loop tinyint UNSIGNED NOT NULL DEFAULT 0,
-			history JSON NOT NULL DEFAULT [],
+			history JSON NOT NULL DEFAULT '[]',
 			CONSTRAINT pk_user_post PRIMARY KEY (`user_id`, `qr_id`),
 			INDEX (`user_id`),
 			INDEX (`next_poke`)

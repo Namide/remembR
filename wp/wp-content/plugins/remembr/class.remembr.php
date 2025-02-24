@@ -1,23 +1,37 @@
 <?php
 
 class Remembr {
-	private static $initiated = false;
+	// private static $initiated = false;
 
 	public static function init() {
-		if ( ! self::$initiated ) {
-			// self::init_hooks();
-		}
+		// if ( !self::$initiated ) {
+		// 	// self::init_hooks();
+
+			
+			
+		// }
+
+		// load_plugin_textdomain( 'remembr' );
+		// $mofile = sprintf( '%s-%s.mo', $plugin, $locale );
+		// $domain_path = path_join( WP_PLUGIN_DIR, "{$plugin}/languages" );
+		// load_textdomain( $plugin, path_join( $domain_path, $mofile ) );
+
+		load_plugin_textdomain('remembr', 'wp-content/plugins/remembr/languages');
+		
+		// $domain_path = path_join( WP_PLUGIN_DIR, "languages" );
+		// load_textdomain( REMEMBR__PLUGIN_DIR . 'languages', path_join( $domain_path, 'remembr-fr_FR.mo' ) );
+
+		register_block_type( REMEMBR__PLUGIN_DIR . 'blocks/issue/' );
+		register_block_type( REMEMBR__PLUGIN_DIR . 'blocks/score/' );
 	}
+
+
 
 	public static function plugin_activation() {
 		if ( version_compare( $GLOBALS['wp_version'], REMEMBR__MINIMUM_WP_VERSION, '<' ) ) {
-			load_plugin_textdomain( 'akismet' );
-
 			$message = '<strong>' .
-				/* translators: 1: Current Akismet version number, 2: Minimum WordPress version number required. */
-				sprintf( esc_html__( 'Akismet %1$s requires WordPress %2$s or higher.', 'remembr' ), REMEMBR_VERSION, REMEMBR__MINIMUM_WP_VERSION ) . '</strong> ' .
-				/* translators: 1: WordPress documentation URL, 2: Akismet download URL. */
-				sprintf( __( 'Please <a href="%1$s">upgrade WordPress</a> to a current version, or <a href="%2$s">downgrade to version 2.4 of the Remembr plugin</a>.', 'remembr' ), 'https://codex.wordpress.org/Upgrading_WordPress', 'https://wordpress.org/plugins/remembr' );
+				/* translators: 1: Current RemembR version number, 2: Minimum WordPress version number required. */
+				sprintf( esc_html__( 'RemembR %1$s requires WordPress %2$s or higher.', 'RemembR' ), REMEMBR_VERSION, REMEMBR__MINIMUM_WP_VERSION ) . '</strong> ';
 
 			self::bail_on_activation( $message );
 		} elseif ( ! empty( $_SERVER['SCRIPT_NAME'] ) && false !== strpos( $_SERVER['SCRIPT_NAME'], '/wp-admin/plugins.php' ) ) {

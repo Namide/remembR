@@ -120,7 +120,7 @@ export default function Edit({ attributes, setAttributes }) {
 							"core/text-color",
 						]}
 						value={attributes.question}
-						placeholder={__("Question ? ...")}
+						placeholder={__('Question?')}
 					/>
 				</div>
 
@@ -143,7 +143,7 @@ export default function Edit({ attributes, setAttributes }) {
 							"core/text-color",
 						]}
 						value={attributes.response}
-						placeholder={__("Response ? ...")}
+						placeholder={__("Response?")}
 						// onKeyUp={(event) => {
 						// 	if (index === attributes.list.length - 1 && "Enter" === event.key) {
 						// 		addQuestionResponse()

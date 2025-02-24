@@ -4,7 +4,7 @@
 	"description": "Short question to test your knowledge",
 	"author": "Namide",
 	"license": "GPL-3.0 license ",
-	"homepage": "https://github.com/Namide/remembR",
+	"homepage": "https://github.com/Namide/remembr",
 	"main": "issue.php",
 	"scripts": {
 		"build": "wp-scripts build --output-path=../wp/wp-content/plugins/remembr/blocks --webpack-copy-php",

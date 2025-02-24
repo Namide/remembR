@@ -1,0 +1,72 @@
+# Copyright (C) 2025 Namide
+# This file is distributed under the GPLv3.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: RemembR 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/remembr\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-02-24 18:59+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: remembr\n"
+"\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;"
+
+#. Plugin Name of the plugin
+#: remembr.php
+msgid "RemembR"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: remembr.php
+msgid "https://github.com/Namide/remembr"
+msgstr ""
+
+#. Description of the plugin
+#: remembr.php
+msgid "Spaced repetition tool."
+msgstr ""
+
+#. Author of the plugin
+#: remembr.php
+msgid "Namide"
+msgstr ""
+
+#. Author URI of the plugin
+#: remembr.php
+msgid "https://damien-doussaud.com/"
+msgstr ""
+
+#: blocks/issue/render.php:29
+msgid "To use the learning system, you must be logged in."
+msgstr ""
+
+#: blocks/issue/render.php:36
+msgid "Already learning"
+msgstr ""
+
+#: blocks/issue/render.php:43
+msgid "You've just added %d questions to your list"
+msgstr ""
+
+#: blocks/issue/render.php:52
+msgid "Card learned"
+msgstr ""
+
+#: blocks/score/index.js:58 blocks/score/index.js:36
+msgid "RemembR score - hello from the editor!"
+msgstr ""
+
+#: blocks/issue/edit.js:123
+msgid "Question?"
+msgstr ""
+
+#: blocks/issue/edit.js:146
+msgid "Response?"
+msgstr ""

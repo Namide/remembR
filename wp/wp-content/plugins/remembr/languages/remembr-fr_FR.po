@@ -1,0 +1,70 @@
+# Copyright (C) 2025 Namide
+# This file is distributed under the GPLv3.
+msgid ""
+msgstr ""
+"Project-Id-Version: RemembR 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/remembr\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-02-24T17:44:01+00:00\n"
+"PO-Revision-Date: 2025-02-24 19:01+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: remembr\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2"
+
+#: blocks/issue/render.php:36
+msgid "Already learning"
+msgstr "Déjà appris"
+
+msgid "Card learned"
+msgstr "Carte apprise"
+
+#. Author URI of the plugin
+#: remembr.php
+msgid "https://damien-doussaud.com/"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: remembr.php
+msgid "https://github.com/Namide/remembr"
+msgstr ""
+
+#. Author of the plugin
+#: remembr.php
+msgid "Namide"
+msgstr ""
+
+#: blocks/issue/edit.js:123
+msgid "Question?"
+msgstr "Question ?"
+
+#. Plugin Name of the plugin
+#: remembr.php
+msgid "RemembR"
+msgstr ""
+
+#: blocks/score/index.js:58 blocks/score/index.js:36
+msgid "RemembR score - hello from the editor!"
+msgstr ""
+
+#: blocks/issue/edit.js:146
+msgid "Response?"
+msgstr "Réponse ?"
+
+#. Description of the plugin
+#: remembr.php
+msgid "Spaced repetition tool."
+msgstr "Outil de répétition espacée."
+
+#: blocks/issue/render.php:29
+msgid "To use the learning system, you must be logged in."
+msgstr "Pour utiliser le système d'apprentissage, vous devez être connecté."
+
+#: blocks/issue/render.php:43
+msgid "You've just added %d questions to your list"
+msgstr "Vous venez juste d'ajouter %d questions à votre liste"

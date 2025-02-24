@@ -29,3 +29,10 @@ build:
 		-e NPM_CONFIG_PREFIX=/home/node/.npm-global \
 		node:slim \
 		bash -c "npm i; npm run build"
+
+cli:
+	docker run -ti --rm \
+		-v $(shell pwd)\:/usr/src/app \
+		-w /usr/src/app/wp/wp-content/plugins/remembr \
+		codeccoop/wp-cli \
+		bash

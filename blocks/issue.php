@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       RemembR
- * Plugin URI:        https://github.com/Namide/remembR
+ * Plugin URI:        https://github.com/Namide/remembr
  * Description:       Short question to test your knowledge
  * Version:           0.1.0
  * Requires at least: 6.7
