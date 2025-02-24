@@ -56,7 +56,7 @@ msgid "You've just added %d questions to your list"
 msgstr ""
 
 #: blocks/issue/render.php:52
-msgid "Card learned"
+msgid "Validate the card learning"
 msgstr ""
 
 #: blocks/score/index.js:58 blocks/score/index.js:36
@@ -68,5 +68,5 @@ msgid "Question?"
 msgstr ""
 
 #: blocks/issue/edit.js:146
-msgid "Response?"
+msgid "Response"
 msgstr ""

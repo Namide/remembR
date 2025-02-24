@@ -1,31 +1,14 @@
 <?php
 
 class Remembr {
-	// private static $initiated = false;
-
 	public static function init() {
-		// if ( !self::$initiated ) {
-		// 	// self::init_hooks();
 
-			
-			
-		// }
-
-		// load_plugin_textdomain( 'remembr' );
-		// $mofile = sprintf( '%s-%s.mo', $plugin, $locale );
-		// $domain_path = path_join( WP_PLUGIN_DIR, "{$plugin}/languages" );
-		// load_textdomain( $plugin, path_join( $domain_path, $mofile ) );
-
-		load_plugin_textdomain('remembr', 'wp-content/plugins/remembr/languages');
-		
-		// $domain_path = path_join( WP_PLUGIN_DIR, "languages" );
-		// load_textdomain( REMEMBR__PLUGIN_DIR . 'languages', path_join( $domain_path, 'remembr-fr_FR.mo' ) );
+		load_plugin_textdomain('remembr', false, 'remembr/languages');
+		// load_plugin_textdomain('remembr', 'wp-content/plugins/remembr/languages');
 
 		register_block_type( REMEMBR__PLUGIN_DIR . 'blocks/issue/' );
 		register_block_type( REMEMBR__PLUGIN_DIR . 'blocks/score/' );
 	}
-
-
 
 	public static function plugin_activation() {
 		if ( version_compare( $GLOBALS['wp_version'], REMEMBR__MINIMUM_WP_VERSION, '<' ) ) {

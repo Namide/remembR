@@ -21,8 +21,8 @@ msgstr ""
 msgid "Already learning"
 msgstr "Déjà appris"
 
-msgid "Card learned"
-msgstr "Carte apprise"
+msgid "Validate the card learning"
+msgstr "Valider l'apprentissage de la carte"
 
 #. Author URI of the plugin
 #: remembr.php
@@ -53,7 +53,7 @@ msgid "RemembR score - hello from the editor!"
 msgstr ""
 
 #: blocks/issue/edit.js:146
-msgid "Response?"
+msgid "Response"
 msgstr "Réponse ?"
 
 #. Description of the plugin

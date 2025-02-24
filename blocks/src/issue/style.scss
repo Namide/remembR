@@ -6,12 +6,14 @@
  */
 
 .wp-block-remembr-issue--message {
-	font-size: var(--wp--preset--font-size--large);
+	font-size: var(--wp--preset--font-size--normal);
 	font-weight: normal;
-	background-color: greenyellow;
-	border: 1px solid green;
+	background-color: #c2ffd2;
+	border: 1px solid #7acd8f;
 	border-radius: 4px;
 	padding: 0.5em 1em;
+	box-sizing: border-box;
+	margin-block-start: 3em !important;
 }
 
 .wp-block-remembr-issue--warning {
@@ -20,13 +22,18 @@
 	border-color: yellowgreen;
 }
 
+.wp-block-remembr-issue--cta-container {
+	text-align: center;
+}
+
 .wp-block-remembr-issue--cta {
 	cursor: pointer;
-	background-color: lightblue;
-	border: 1px solid lightseagreen;
-	border-radius: 4px;
-	padding: 0.25em 1em;
-	margin: 1em auto;
+	background-color: lightseagreen;
+	border: 1px solid lightblue;
+	color: white;
+	border-radius: 3em;
+	padding: 0.25em 1.5em;
+	margin: 3em auto;
 
 	font-size: inherit;
   font-weight: inherit;
@@ -34,10 +41,6 @@
 }
 
 .wp-block-remembr-issue {
-	// background-color: #FF0077;
-	// color: #fff;
-	// padding: 2px;
-
 	details {
 		border: 1px solid #aaa;
 		border-radius: 4px;

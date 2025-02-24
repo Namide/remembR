@@ -33,7 +33,7 @@ if ($remembr_issue->is_post == false) { ?>
 	$progress = $remembr_issue->get_learning_progress();
 ?>
 
-	<p <?= get_block_wrapper_attributes(['class' => 'wp-block-remembr-issue--message']); ?>>📈 <?= __('Already learning', 'remembr'); ?> <?= round($progress * 100) ?>% </p>
+	<p <?= get_block_wrapper_attributes(['class' => 'wp-block-remembr-issue--message']); ?>>⏳ <?= __('Already learning', 'remembr'); ?> <?= round($progress * 100) ?>% </p>
 
 <?php // If user submit, save all questions (only for the last render.php call)
 } else if ($remembr_issue->get_is_user_submitting()) {
@@ -46,10 +46,10 @@ if ($remembr_issue->is_post == false) { ?>
 } else if ($remembr_issue->get_is_user_submitting() == false) {
 ?>
 
-	<form action="" method="post" <?= get_block_wrapper_attributes(); ?>>
+	<form action="" method="post" <?= get_block_wrapper_attributes([ 'class' => 'wp-block-remembr-issue--cta-container' ]); ?>>
 		<input type="hidden" name='done' value="1">
 		<input type="hidden" name='postID' value="<?= get_the_ID() ?>">
-		<input type="submit" value="<?= __('Card learned', 'RemembR'); ?> 👍" class="wp-block-remembr-issue--cta">
+		<input type="submit" value="<?= __('Validate the card learning', 'remembr'); ?> 🚀" class="wp-block-remembr-issue--cta">
 	</form>
 
 <?php } ?>
