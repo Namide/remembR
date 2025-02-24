@@ -5,11 +5,39 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+.wp-block-remembr-issue--message {
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: normal;
+	background-color: greenyellow;
+	border: 1px solid green;
+	border-radius: 4px;
+	padding: 0.5em 1em;
+}
+
+.wp-block-remembr-issue--warning {
+	@extend .wp-block-remembr-issue--message;
+	background-color: yellow;
+	border-color: yellowgreen;
+}
+
+.wp-block-remembr-issue--cta {
+	cursor: pointer;
+	background-color: lightblue;
+	border: 1px solid lightseagreen;
+	border-radius: 4px;
+	padding: 0.25em 1em;
+	margin: 1em auto;
+
+	font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
 .wp-block-remembr-issue {
 	// background-color: #FF0077;
 	// color: #fff;
 	// padding: 2px;
-	
+
 	details {
 		border: 1px solid #aaa;
 		border-radius: 4px;
